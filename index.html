@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kabisan P | BBA Student, Business Development</title>
+  <meta name="description"
+    content="Kabisan P - BBA Student specializing in Business Development, PSG College of Arts and Science." />
+  <meta name="author" content="Kabisan P" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <meta name="theme-color" content="#0F172A" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Kabisan P | BBA Student, Business Development" />
+  <meta property="og:description"
+    content="Final-year BBA student at PSG College of Arts and Science with a clear focus on Business Development, leadership, and operational excellence." />
+  <meta property="og:image" content="./portrait.webp" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kabisan P | BBA Student, Business Development" />
+  <meta name="twitter:description"
+    content="Final-year BBA student at PSG College of Arts and Science with a clear focus on Business Development, leadership, and operational excellence." />
+  <meta name="twitter:image" content="./portrait.webp" />
+
+  <!-- Google Fonts: Syne, Outfit, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body class="executive-palette">
+  <!-- Interactive 3D WebGL Canvas -->
+  <div id="webgl-canvas-container" aria-hidden="true">
+    <canvas id="bg-canvas"></canvas>
+  </div>
+
+  <!-- Ambient Light Blobs -->
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow glow-3" aria-hidden="true"></div>
+
+  <!-- Header / Floating Glass Navbar -->
+  <header id="site-header" class="site-header">
+    <div class="header-container">
+      <a href="#home" class="brand-logo" id="brand-logo" aria-label="Kabisan P Home">
+        <span class="logo-mark">K</span>
+        <span class="logo-name">Kabisan P</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#what-i-bring" class="nav-link">What I Bring</a></li>
+          <li><a href="#philosophy" class="nav-link">Philosophy</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#exposure" class="nav-link">Exposure</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#toolkit" class="nav-link">Toolkit</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="Kabisan_P_Resume.pdf" download="Kabisan_P_Resume.pdf" class="btn btn-sm btn-ghost"
+          id="nav-download-resume">
+          <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Resume (PDF)</span>
+        </a>
+        <a href="#contact" class="btn btn-sm btn-glow" id="nav-get-in-touch">Let's Connect</a>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Nav -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+      <ul class="mobile-nav-links">
+        <li><a href="#home" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About Me</a></li>
+        <li><a href="#what-i-bring" class="mobile-nav-link">What I Bring</a></li>
+        <li><a href="#philosophy" class="mobile-nav-link">My Philosophy</a></li>
+        <li><a href="#experience" class="mobile-nav-link">Experience & Leadership</a></li>
+        <li><a href="#exposure" class="mobile-nav-link">Entrepreneurial Exposure</a></li>
+        <li><a href="#education" class="mobile-nav-link">Education</a></li>
+        <li><a href="#certifications" class="mobile-nav-link">Certifications</a></li>
+        <li><a href="#toolkit" class="mobile-nav-link">Toolkit</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-drawer-cta">
+        <a href="Kabisan_P_Resume.pdf" download="Kabisan_P_Resume.pdf" class="btn btn-primary w-full">Download Resume
+          (PDF)</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- SECTION 1: HOME (HERO) -->
+    <section id="home" class="hero-section section-padding">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <!-- Status Pill -->
+          <div class="hero-badge-pill">
+            <span class="status-beacon"></span>
+            <span class="badge-text">BBA Student | Business Development</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="name-gradient">Kabisan P</span>
+          </h1>
+
+          <!-- Motto Highlight Banner -->
+          <div class="hero-motto-box">
+            <div class="motto-tag">Motto</div>
+            <div class="motto-quote">"Learn. Unlearn. Relearn."</div>
+          </div>
+
+          <!-- Hero Statement -->
+          <p class="hero-statement">
+            Understanding people is where every great solution begins. I'm a BBA student with an open mind, an outspoken
+            voice, and a drive to turn real customer needs into real business value.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#about" class="btn btn-glow" id="hero-btn-profile">
+              <span>View Profile</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+            <a href="Kabisan_P_Resume.pdf" download="Kabisan_P_Resume.pdf" class="btn btn-glass" id="hero-btn-resume">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download Resume</span>
+            </a>
+            <a href="#contact" class="btn btn-ghost" id="hero-btn-contact">
+              <span>Get in Touch</span>
+            </a>
+          </div>
+
+          <!-- Quick facts -->
+          <div class="quick-facts-container">
+            <div class="quick-facts-header">
+              <span class="qf-line"></span>
+              <h3 class="quick-facts-heading">Quick facts:</h3>
+            </div>
+            <div class="quick-facts-grid">
+              <div class="fact-card tilt-card" data-tilt>
+                <div class="fact-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                  </svg>
+                </div>
+                <div class="fact-content">
+                  <span class="fact-label">Academic Focus</span>
+                  <div class="fact-text">Final-Year BBA, PSG College of Arts and Science</div>
+                </div>
+              </div>
+
+              <div class="fact-card tilt-card" data-tilt>
+                <div class="fact-icon-wrap icon-amber">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                  </svg>
+                </div>
+                <div class="fact-content">
+                  <span class="fact-label">National Recognition</span>
+                  <div class="fact-text">Finalist, National Entrepreneurship Challenge, E-Summit 2025, IIT Bombay</div>
+                </div>
+              </div>
+
+              <div class="fact-card tilt-card" data-tilt>
+                <div class="fact-icon-wrap icon-amber">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                  </svg>
+                </div>
+                <div class="fact-content">
+                  <span class="fact-label">National Selection</span>
+                  <div class="fact-text">Participant, IDE Bootcamp Edition 3 (Phase 3), AICTE, Ministry of Education
+                  </div>
+                </div>
+              </div>
+
+              <div class="fact-card tilt-card" data-tilt>
+                <div class="fact-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="fact-content">
+                  <span class="fact-label">Location Base</span>
+                  <div class="fact-text">Coimbatore, Tamil Nadu</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual: 3D Luxury Stage + Cutout Portrait -->
+        <div class="hero-visual">
+          <div class="portrait-stage-wrapper">
+            <!-- 3D Hologram Glow Rings -->
+            <div class="hologram-ring ring-outer"></div>
+            <div class="hologram-ring ring-inner"></div>
+
+            <!-- Floating Credential Badges -->
+            <div class="floating-chip chip-top tilt-card" data-tilt>
+              <span class="chip-dot"></span>
+              <span>PSG CAS &bull; Final-Year BBA</span>
+            </div>
+
+            <div class="floating-chip chip-mid tilt-card" data-tilt>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
+              <span>AICTE &bull; IDE Bootcamp Participant</span>
+            </div>
+
+            <div class="floating-chip chip-bottom tilt-card" data-tilt>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <span>IIT Bombay NEC Finalist</span>
+            </div>
+
+            <!-- Portrait Frame with Luxury Backlight -->
+            <div class="portrait-podium" id="hero-portrait-frame">
+              <picture>
+                <source srcset="portrait.webp" type="image/webp" />
+                <img src="portrait_cutout.png" alt="Kabisan P - Professional Portrait in Navy Suit"
+                  class="portrait-image" id="hero-portrait-img" loading="eager" />
+              </picture>
+              <div class="podium-glass-bar">
+                <span class="bar-status"></span>
+                <span class="bar-title">Kabisan P &bull; Business Development</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ABOUT ME -->
+    <section id="about" class="about-section section-padding section-lux">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">02 &bull; Background &amp; Story</div>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">Understanding customer reality, personal growth, and cross-functional leadership.
+          </p>
+        </div>
+
+        <div class="about-lux-card tilt-card" data-tilt>
+          <div class="about-intro-highlight">
+            <span class="highlight-bar"></span>
+            <p class="about-lead">
+              I'm a final-year BBA student at PSG College of Arts and Science, Coimbatore, with a clear focus on
+              business development.
+            </p>
+          </div>
+
+          <div class="about-grid-content">
+            <div class="about-card-left">
+              <p class="about-body-text">
+                What drives me is understanding people. When I understand what a customer or a client truly needs,
+                solving the problem becomes a matter of structure and execution. I'm open-minded, outspoken, and always
+                eager to learn something new.
+              </p>
+
+              <!-- Inox Air Products Machine Analogy Feature Box -->
+              <div class="machine-analogy-box">
+                <div class="analogy-header">
+                  <div class="analogy-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path
+                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                      </path>
+                    </svg>
+                  </div>
+                  <span class="analogy-title">Operational Insight</span>
+                </div>
+                <p class="about-body-text">
+                  My approach is Learn. Unlearn. Relearn. Growth means letting go of outdated ideas as readily as
+                  picking up new ones. I saw this first-hand at Inox Air Products: machines that aren't regularly
+                  checked, repaired, and upgraded rust, and people are no different. Through my roles at PSG, I've
+                  worked with institutions, startups, government bodies, and corporates, and helped bring together
+                  5,000+ students, educators, and professionals. That work built my communication, leadership, and
+                  ability to deliver in a team.
+                </p>
+              </div>
+
+              <!-- Personal Purpose Banner -->
+              <div class="purpose-quote-banner">
+                <div class="purpose-icon">✦</div>
+                <p class="purpose-text">
+                  I want to explore the world to understand life, find my purpose in it, and live it to the fullest.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: WHAT I BRING -->
+    <section id="what-i-bring" class="what-i-bring-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">03 &bull; Core Capabilities</div>
+          <h2 class="section-title">What I Bring</h2>
+          <p class="section-subtitle">Combining customer-first intuition with systematic follow-through and
+            cross-functional leadership.</p>
+        </div>
+
+        <div class="pillars-lux-grid">
+          <!-- Pillar 1 -->
+          <div class="pillar-lux-card tilt-card" data-tilt>
+            <div class="pillar-card-glow"></div>
+            <div class="pillar-top">
+              <div class="pillar-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <span class="pillar-num">01</span>
+            </div>
+            <h3 class="pillar-heading">Business development</h3>
+            <p class="pillar-description">identifying needs, building relationships, following through</p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="pillar-lux-card tilt-card" data-tilt>
+            <div class="pillar-card-glow"></div>
+            <div class="pillar-top">
+              <div class="pillar-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <span class="pillar-num">02</span>
+            </div>
+            <h3 class="pillar-heading">Customer understanding</h3>
+            <p class="pillar-description">listening first, then recommending</p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="pillar-lux-card tilt-card" data-tilt>
+            <div class="pillar-card-glow"></div>
+            <div class="pillar-top">
+              <div class="pillar-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </div>
+              <span class="pillar-num">03</span>
+            </div>
+            <h3 class="pillar-heading">Communication</h3>
+            <p class="pillar-description">working with students, faculty, institutions, and partners</p>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="pillar-lux-card tilt-card" data-tilt>
+            <div class="pillar-card-glow"></div>
+            <div class="pillar-top">
+              <div class="pillar-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                  </polygon>
+                </svg>
+              </div>
+              <span class="pillar-num">04</span>
+            </div>
+            <h3 class="pillar-heading">Leadership</h3>
+            <p class="pillar-description">leading teams and activities from planning to delivery</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: MY PHILOSOPHY -->
+    <section id="philosophy" class="philosophy-section section-padding section-lux">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">04 &bull; Mental Model</div>
+          <h2 class="section-title">My Philosophy</h2>
+          <p class="section-subtitle">A growth mindset forged through real-world operational exposure.</p>
+        </div>
+
+        <!-- Featured Quote Centerpiece -->
+        <div class="philosophy-lux-quote tilt-card" data-tilt>
+          <div class="quote-ambient-light"></div>
+          <div class="quote-symbol">“</div>
+          <blockquote class="quote-text">
+            "I want to explore the world to understand life, find my purpose in it, and live it to the fullest. My way
+            of doing it: Learn. Unlearn. Relearn."
+          </blockquote>
+          <div class="quote-signature">
+            <div class="sig-line"></div>
+            <div class="sig-name">Kabisan P</div>
+            <div class="sig-line"></div>
+          </div>
+        </div>
+
+        <!-- The 3 Pillars of Philosophy -->
+        <div class="philosophy-steps-grid">
+          <!-- Learn -->
+          <div class="phil-step-card tilt-card" data-tilt>
+            <div class="step-badge">01</div>
+            <div class="step-header">
+              <div class="step-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 16v-4"></path>
+                  <path d="M12 8h.01"></path>
+                </svg>
+              </div>
+              <h3 class="step-title">Learn</h3>
+            </div>
+            <p class="step-description">Stay curious. Every person and every problem teaches something.</p>
+          </div>
+
+          <!-- Unlearn -->
+          <div class="phil-step-card tilt-card" data-tilt>
+            <div class="step-badge">02</div>
+            <div class="step-header">
+              <div class="step-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="23 4 23 10 17 10"></polyline>
+                  <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                </svg>
+              </div>
+              <h3 class="step-title">Unlearn</h3>
+            </div>
+            <p class="step-description">Let go of habits and assumptions that no longer serve you.</p>
+          </div>
+
+          <!-- Relearn -->
+          <div class="phil-step-card tilt-card" data-tilt>
+            <div class="step-badge">03</div>
+            <div class="step-header">
+              <div class="step-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+                </svg>
+              </div>
+              <h3 class="step-title">Relearn</h3>
+            </div>
+            <p class="step-description">Return with a fresh perspective and keep upgrading.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: EXPERIENCE & LEADERSHIP -->
+    <section id="experience" class="experience-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">05 &bull; Proven Track Record</div>
+          <h2 class="section-title">Experience & Leadership</h2>
+          <p class="section-subtitle">Real-world institutional coordination and engineer-led industrial exposure.</p>
+        </div>
+
+        <div class="timeline-lux-container">
+          <div class="timeline-spine"></div>
+
+          <!-- Role 1 -->
+          <div class="timeline-entry tilt-card" data-tilt>
+            <div class="timeline-node">
+              <div class="node-glow"></div>
+            </div>
+            <div class="entry-card-body">
+              <div class="entry-meta-row">
+                <span class="entry-tag">Campus Leadership</span>
+                <span class="entry-period">2025 to 2026</span>
+              </div>
+              <h3 class="entry-title">Operational Lead, Entrepreneurship Cell, PSG College of Arts and Science</h3>
+              <ul class="entry-bullets">
+                <li>Coordinated 10+ entrepreneurship and industry programs with institutions, government bodies, startups, and corporate partners, reaching 5,000+ students, educators, and professionals.</li>
+                <li>Supported flagship initiatives including the <strong>IIC Regional Meet 2025</strong> (300+ institution representatives), <strong>YUKTI Innovation Challenge</strong>, and <strong>Build with AI Workshop</strong> (Hack2Skill).</li>
+                <li>Developed leadership and stakeholder communication by leading student teams and executing activities from planning to delivery.</li>
+              </ul>
+              <div class="entry-cert-row">
+                <a href="operational_lead.pdf" target="_blank" rel="noopener noreferrer" class="exposure-cert-link">
+                  <span>Recognition Certificate</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 2 -->
+          <div class="timeline-entry tilt-card" data-tilt>
+            <div class="timeline-node">
+              <div class="node-glow"></div>
+            </div>
+            <div class="entry-card-body">
+              <div class="entry-meta-row">
+                <span class="entry-tag">IP Awareness</span>
+                <span class="entry-period">2026 to Present</span>
+              </div>
+              <h3 class="entry-title">Vice Chairperson, IPR Cell, PSG College of Arts and Science</h3>
+              <ul class="entry-bullets">
+                <li>Conducts intellectual property awareness drives for students and innovators</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Role 3 -->
+          <div class="timeline-entry tilt-card" data-tilt>
+            <div class="timeline-node">
+              <div class="node-glow"></div>
+            </div>
+            <div class="entry-card-body">
+              <div class="entry-meta-row">
+                <span class="entry-tag">Industrial Operations</span>
+                <span class="entry-period">May 2025, 15 days</span>
+              </div>
+              <h3 class="entry-title">Management Intern, Inox Air Products Pvt. Ltd.</h3>
+              <ul class="entry-bullets">
+                <li>Gained exposure to industrial operations, supply chain workflows, and workplace safety in an
+                  engineer-led organisation</li>
+                <li>Learned how regular inspection, repair, and renewal keep a system running, a lesson I now apply to
+                  my own growth</li>
+                <li>Worked across operations, production, and administration teams</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: ENTREPRENEURIAL EXPOSURE -->
+    <section id="exposure" class="exposure-section section-padding section-lux">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">06 &bull; Competitive Recognition</div>
+          <h2 class="section-title">Entrepreneurial Exposure</h2>
+          <p class="section-subtitle">National level challenges and ministry-selected bootcamps.</p>
+        </div>
+
+        <div class="exposure-lux-grid">
+          <!-- Item 1: IIT Bombay -->
+          <div class="exposure-lux-card card-gold tilt-card" data-tilt>
+            <div class="exposure-top-row">
+              <div class="exposure-trophy-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                  <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                  <path d="M4 22h16"></path>
+                  <path d="M10 14.66V17c0 .55-.45 1-1 1H7c-.55 0-1-.45-1-1v-2.34"></path>
+                  <path d="M18 14.66V17c0 .55-.45 1-1 1h-2c-.55 0-1-.45-1-1v-2.34"></path>
+                  <path d="M14 10.66V13c0 .55-.45 1-1 1h-2c-.55 0-1-.45-1-1v-2.34"></path>
+                  <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                </svg>
+              </div>
+              <span class="badge-gold">National Finalist</span>
+            </div>
+            <h3 class="exposure-lux-title">Finalist, National Entrepreneurship Challenge (NEC), E-Summit 2025, IIT
+              Bombay (team member)</h3>
+            <div class="exposure-footer">
+              <span>E-Summit 2025 &bull; IIT Bombay</span>
+            </div>
+          </div>
+
+          <!-- Item 2: AICTE Shillong -->
+          <div class="exposure-lux-card card-cyan tilt-card" data-tilt>
+            <div class="exposure-top-row">
+              <div class="exposure-trophy-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                  </path>
+                </svg>
+              </div>
+              <span class="badge-cyan">Selected Participant</span>
+            </div>
+            <h3 class="exposure-lux-title">Selected participant, IDE Bootcamp Edition 3 (Phase 3), AICTE, Ministry of
+              Education, Shillong (team member)</h3>
+            <div class="exposure-footer">
+              <span>Ministry of Education &bull; AICTE Shillong</span>
+              <a href="bootcamp.pdf" target="_blank" rel="noopener noreferrer" class="exposure-cert-link">
+                <span>View Certificate</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: EDUCATION -->
+    <section id="education" class="education-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">07 &bull; Academic Background</div>
+          <h2 class="section-title">Education</h2>
+          <p class="section-subtitle">Consistent academic discipline and foundational business management training.</p>
+        </div>
+
+        <div class="education-lux-deck">
+          <!-- Higher Education -->
+          <div class="edu-lux-card tilt-card" data-tilt>
+            <div class="edu-card-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <div class="edu-body">
+              <h3 class="edu-degree">BBA, PSG College of Arts and Science, Coimbatore</h3>
+              <p class="edu-institution">PSG College of Arts and Science</p>
+            </div>
+            <div class="edu-pill">Expected 2027, CGPA 7.08/10</div>
+          </div>
+
+          <!-- Class XII -->
+          <div class="edu-lux-card tilt-card" data-tilt>
+            <div class="edu-card-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <div class="edu-body">
+              <h3 class="edu-degree">Class XII, R.J. Matriculation Higher Secondary School</h3>
+              <p class="edu-institution">Higher Secondary Education</p>
+            </div>
+            <div class="edu-pill">2023, 92.7%</div>
+          </div>
+
+          <!-- Class X -->
+          <div class="edu-lux-card tilt-card" data-tilt>
+            <div class="edu-card-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <div class="edu-body">
+              <h3 class="edu-degree">Class X, R.J. Matriculation Higher Secondary School</h3>
+              <p class="edu-institution">Secondary School Leaving Certificate</p>
+            </div>
+            <div class="edu-pill">2021, 87.0%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: CERTIFICATIONS -->
+    <section id="certifications" class="certifications-section section-padding section-lux">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">08 &bull; Professional Upgrades</div>
+          <h2 class="section-title">Certifications</h2>
+          <p class="section-subtitle">Formal credentials and continuous professional enrichment.</p>
+        </div>
+
+        <div class="cert-lux-grid">
+          <!-- Certificate 1: ISO 17025:2017 Internal Auditor -->
+          <div class="cert-lux-card cert-verified tilt-card" data-tilt>
+            <div class="cert-card-header">
+              <div class="cert-seal">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <polyline points="9 12 11 14 15 10"></polyline>
+                </svg>
+              </div>
+              <span class="cert-status-tag">Govt. of India Certified</span>
+            </div>
+            <h3 class="cert-title">ISO/IEC 17025:2017 Internal Auditor</h3>
+            <p class="cert-subtitle">Laboratory Quality Management System (LQMS)</p>
+            <p class="cert-source">MSME - Technology Development Centre, Chennai (CFTI), Ministry of MSME, Government of
+              India Society</p>
+            <div class="cert-card-footer">
+              <a href="iso_auditor.pdf" target="_blank" rel="noopener noreferrer" class="cert-pdf-link">
+                <span>View Certificate</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Certificate 2: Wadhwani Foundation Ignite India 5.0 (NEN Course) -->
+          <div class="cert-lux-card cert-verified tilt-card" data-tilt>
+            <div class="cert-card-header">
+              <div class="cert-seal">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+              </div>
+              <span class="cert-status-tag">NEN &bull; 42 Hours</span>
+            </div>
+            <h3 class="cert-title">Ignite India 5.0 (NEN Course)</h3>
+            <p class="cert-subtitle">Ideation, Business Modeling &amp; Financial Planning</p>
+            <p class="cert-source">Wadhwani Foundation &bull; Wadhwani Global Entrepreneur / National Entrepreneurship
+              Network (NEN)</p>
+            <div class="cert-card-footer">
+              <a href="wandhawani.pdf" target="_blank" rel="noopener noreferrer" class="cert-pdf-link">
+                <span>View Certificate</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Certificate 3: NPTEL -->
+          <div class="cert-lux-card cert-verified tilt-card" data-tilt>
+            <div class="cert-card-header">
+              <div class="cert-seal">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <span class="cert-status-tag">IIT Madras</span>
+            </div>
+            <h3 class="cert-title">NPTEL: Foundations of Accounting and Finance</h3>
+            <p class="cert-subtitle">Financial Principles &amp; Accounting Structure</p>
+            <p class="cert-source">National Programme on Technology Enhanced Learning (NPTEL) &bull; Swayam, MoE Govt. of India</p>
+            <div class="cert-card-footer">
+              <a href="nptel_accounting_finance.pdf" target="_blank" rel="noopener noreferrer" class="cert-pdf-link">
+                <span>View Certificate</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: TOOLKIT -->
+    <section id="toolkit" class="toolkit-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">09 &bull; Modern Stack</div>
+          <h2 class="section-title">Toolkit</h2>
+          <p class="section-subtitle">Software, productivity platforms, AI models, and communication proficiencies.</p>
+        </div>
+
+        <div class="toolkit-lux-grid">
+          <!-- Panel 1 -->
+          <div class="toolkit-lux-card tilt-card" data-tilt>
+            <div class="tool-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="tool-cat-name">Productivity and presentation</h3>
+            <p class="tool-raw-text">MS Excel, Word, PowerPoint, Google Workspace, Canva</p>
+            <div class="tool-tag-cloud">
+              <span class="tool-tag">MS Excel</span>
+              <span class="tool-tag">Word</span>
+              <span class="tool-tag">PowerPoint</span>
+              <span class="tool-tag">Google Workspace</span>
+              <span class="tool-tag">Canva</span>
+            </div>
+          </div>
+
+          <!-- Panel 2 -->
+          <div class="toolkit-lux-card tilt-card" data-tilt>
+            <div class="tool-icon-wrapper icon-ai">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+                <path d="M12 12L2.1 12.05A10 10 0 0 0 12 22v-10z"></path>
+              </svg>
+            </div>
+            <h3 class="tool-cat-name">AI tools</h3>
+            <p class="tool-raw-text">Claude, ChatGPT, Gemini, Copilot</p>
+            <div class="tool-tag-cloud">
+              <span class="tool-tag tag-cyan">Claude</span>
+              <span class="tool-tag tag-cyan">ChatGPT</span>
+              <span class="tool-tag tag-cyan">Gemini</span>
+              <span class="tool-tag tag-cyan">Copilot</span>
+            </div>
+          </div>
+
+          <!-- Panel 3 -->
+          <div class="toolkit-lux-card tilt-card" data-tilt>
+            <div class="tool-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                </path>
+              </svg>
+            </div>
+            <h3 class="tool-cat-name">Languages</h3>
+            <p class="tool-raw-text">Tamil (native), English (professional working), Hindi (basic working)</p>
+            <div class="tool-tag-cloud">
+              <span class="tool-tag">Tamil (native)</span>
+              <span class="tool-tag">English (professional working)</span>
+              <span class="tool-tag">Hindi (basic working)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 10: CONTACT -->
+    <section id="contact" class="contact-section section-padding section-lux">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">10 &bull; Direct Outreach</div>
+          <h2 class="section-title">Contact</h2>
+          <p class="section-subtitle">Let's discuss opportunities, internships, or business development initiatives.</p>
+        </div>
+
+        <div class="contact-lux-hub">
+          <!-- Contact Left: Executive Info -->
+          <div class="contact-side-info tilt-card" data-tilt>
+            <div class="contact-heading-box">
+              <span class="status-beacon"></span>
+              <h3 class="contact-main-heading">Let's Connect</h3>
+            </div>
+            <p class="contact-intro-statement">
+              Open to full-time roles, internships, and conversations in business development.
+            </p>
+
+            <div class="direct-contact-stack">
+              <!-- Email -->
+              <a href="mailto:kabisanp10@gmail.com" class="direct-contact-card" id="contact-email-btn">
+                <div class="dc-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="dc-info">
+                  <span class="dc-label">Email:</span>
+                  <span class="dc-val">kabisanp10@gmail.com</span>
+                </div>
+              </a>
+
+              <!-- Phone -->
+              <a href="tel:+919597814770" class="direct-contact-card" id="contact-phone-btn">
+                <div class="dc-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="dc-info">
+                  <span class="dc-label">Phone:</span>
+                  <span class="dc-val">+91 9597814770</span>
+                </div>
+              </a>
+
+              <!-- Location -->
+              <div class="direct-contact-card">
+                <div class="dc-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="dc-info">
+                  <span class="dc-label">Location:</span>
+                  <span class="dc-val">Coimbatore, Tamil Nadu</span>
+                </div>
+              </div>
+
+              <!-- LinkedIn -->
+              <a href="https://linkedin.com/in/kabisan-p" target="_blank" rel="noopener noreferrer"
+                class="direct-contact-card" id="contact-linkedin-btn">
+                <div class="dc-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </div>
+                <div class="dc-info">
+                  <span class="dc-label">LinkedIn:</span>
+                  <span class="dc-val">linkedin.com/in/kabisan-p</span>
+                </div>
+              </a>
+            </div>
+
+            <!-- Resume Download Section -->
+            <div class="resume-download-banner">
+              <span class="rb-title">Resume:</span>
+              <a href="Kabisan_P_Resume.pdf" download="Kabisan_P_Resume.pdf" class="btn btn-glow w-full"
+                id="contact-download-resume">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Download Resume (PDF)</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Right: Modern Glass Form -->
+          <div class="contact-side-form tilt-card" data-tilt>
+            <form id="contact-form" class="contact-lux-form" action="54e97644-23de-41d4-a460-ea60d1069031"
+              method="POST">
+              <!-- Web3Forms Integration (Get free key at web3forms.com to deliver submissions to kabisanp10@gmail.com) -->
+              <input type="hidden" name="access_key" id="form-access-key" value="YOUR_ACCESS_KEY_HERE" />
+              <input type="hidden" name="from_name" value="Kabisan P - Portfolio Website" />
+
+              <div class="form-field-group">
+                <label for="form-name" class="form-field-label">Name</label>
+                <div class="input-wrap">
+                  <input type="text" id="form-name" name="name" class="form-input" placeholder="Your Name" required />
+                </div>
+              </div>
+
+              <div class="form-field-group">
+                <label for="form-email" class="form-field-label">Email</label>
+                <div class="input-wrap">
+                  <input type="email" id="form-email" name="email" class="form-input"
+                    placeholder="your.email@example.com" required />
+                </div>
+              </div>
+
+              <div class="form-field-group">
+                <label for="form-subject" class="form-field-label">Subject</label>
+                <div class="input-wrap">
+                  <input type="text" id="form-subject" name="subject" class="form-input"
+                    placeholder="Subject / Opportunity inquiry" required />
+                </div>
+              </div>
+
+              <div class="form-field-group">
+                <label for="form-message" class="form-field-label">Message</label>
+                <div class="input-wrap">
+                  <textarea id="form-message" name="message" rows="5" class="form-textarea"
+                    placeholder="Write your message here..." required></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-glow w-full" id="form-submit-btn">
+                <span>Send</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+
+              <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <span class="footer-name">Kabisan P</span>
+        <span class="footer-dot">&bull;</span>
+        <span class="footer-motto">"Learn. Unlearn. Relearn."</span>
+      </div>
+      <div class="footer-right">
+        <span class="footer-domain">kabisanp.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./src/main.ts"></script>
+</body>
+
+</html>
