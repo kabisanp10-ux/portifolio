@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import type { ThreeEngineConfig, MousePhysicsState } from './types';
+import type { ThreeEngineConfig, MousePhysicsState } from '../types';
 
 /**
  * ThreeNexusEngine

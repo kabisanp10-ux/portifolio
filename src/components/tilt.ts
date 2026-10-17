@@ -1,4 +1,4 @@
-import type { TiltCardOptions } from './types';
+import type { TiltCardOptions } from '../types';
 
 /**
  * CardTiltEngine

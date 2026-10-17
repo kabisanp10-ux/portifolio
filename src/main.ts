@@ -1,7 +1,8 @@
-import { ThreeNexusEngine } from './three-scene';
-import { CardTiltEngine } from './tilt';
-import { NavigationController } from './navigation';
-import { ContactFormController } from './contact';
+import './styles/index.css';
+import { ThreeNexusEngine } from './three/three-scene';
+import { CardTiltEngine } from './components/tilt';
+import { NavigationController } from './components/navigation';
+import { ContactFormController } from './components/contact';
 
 /**
  * Kabisan P — Portfolio Application Initializer

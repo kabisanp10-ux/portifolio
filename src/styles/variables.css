@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Kabisan P — Executive Luxury Portfolio Design System
+   Palette Rule:
+   • Dominant (60%): Off-White / Crisp Light Gray (#F8F9FA) — Base background
+   • Secondary (30%): Deep Corporate Navy (#0F172A / #1E293B) — Headers, nav, text
+   • Accent (10%): Matte Gold / Brass (#D4AF37 / #C6A15B) — Premium buttons, highlights
+   ========================================================================== */
+
+:root {
+  /* 60% Dominant: Off-White & Crisp Light Gray */
+  --bg-base: #f8f9fa;
+  --bg-pure: #ffffff;
+  --bg-subtle: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-card-hover: #ffffff;
+  --bg-card-elevated: #ffffff;
+
+  /* 30% Secondary: Deep Corporate Navy */
+  --navy-darkest: #070e1b;
+  --navy-primary: #0f172a;
+  --navy-secondary: #1e293b;
+  --navy-surface: #1e293b;
+  --navy-muted: #334155;
+  --navy-text: #0f172a;
+  --navy-body: #334155;
+  --text-muted: #64748b;
+  --text-light-muted: #94a3b8;
+
+  /* 10% Accent: Matte Gold & Brass */
+  --gold-primary: #c6a15b;
+  --gold-bright: #d4af37;
+  --gold-dark: #a17a28;
+  --gold-subtle: rgba(198, 161, 91, 0.12);
+  --gold-border: rgba(198, 161, 91, 0.35);
+  --gold-glow: rgba(212, 175, 55, 0.25);
+  --gold-gradient: linear-gradient(135deg, #d4af37 0%, #c6a15b 100%);
+
+  /* Borders & Shadows */
+  --border-light: #e2e8f0;
+  --border-subtle: rgba(15, 23, 42, 0.08);
+  --border-card: #e2e8f0;
+  --card-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.06), 0 0 1px 1px rgba(15, 23, 42, 0.04);
+  --card-shadow-hover: 0 18px 45px -10px rgba(15, 23, 42, 0.12), 0 0 0 1px var(--gold-border);
+
+  /* Typography */
+  --font-display: 'Syne', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+

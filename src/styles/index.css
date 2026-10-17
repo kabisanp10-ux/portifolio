@@ -1,0 +1,10 @@
+/* ==========================================================================
+   Kabisan P — Executive Luxury Portfolio Master Stylesheet
+   Aggregates design tokens, layout, navigation, sections, and responsive rules.
+   ========================================================================== */
+
+@import './variables.css';
+@import './base.css';
+@import './navbar.css';
+@import './sections.css';
+@import './responsive.css';

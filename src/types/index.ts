@@ -23,6 +23,11 @@ export interface ContactFormData {
   message: string;
 }
 
+export interface ContactSubmissionRecord extends ContactFormData {
+  id: string;
+  timestamp: string;
+}
+
 export interface TiltCardOptions {
   maxTiltDegrees?: number;
   perspective?: number;

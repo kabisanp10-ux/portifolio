@@ -22,6 +22,27 @@ A modern, executive personal portfolio engineered with **TypeScript**, **Three.j
 
 ---
 
+## 📁 Project Architecture
+
+```
+portifolio/
+├── docs/                 # Documentation & high-resolution portrait assets
+├── public/               # Verified certificates (PDFs) & web icons
+├── src/
+│   ├── components/       # UI Controllers (Navigation, ContactForm, CardTilt)
+│   ├── styles/           # Modular CSS Design System (tokens, base, nav, sections, responsive)
+│   ├── three/            # Interactive Three.js 3D WebGL Engine
+│   ├── types/            # TypeScript data contracts & interfaces
+│   ├── main.ts           # Orchestrator entry point
+│   └── vite-env.d.ts     # Vite environment types
+├── index.html            # Semantic HTML5 executive layout
+├── vite.config.ts        # Bundler configuration with Three.js manual chunking
+├── tsconfig.json         # Strict TypeScript configuration
+└── package.json          # Package manifest & scripts
+```
+
+---
+
 ## 🛠️ Tech Stack
 
 - **Core**: HTML5, TypeScript, Vanilla CSS

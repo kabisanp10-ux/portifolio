@@ -1,4 +1,4 @@
-import type { ContactFormData } from './types';
+import type { ContactFormData } from '../types';
 
 /**
  * ContactFormController
@@ -50,7 +50,7 @@ export class ContactFormController {
 
       this.setLoading(true);
 
-      // 1. Store to local browser database (localStorage archive)
+      // 1. Store to local browser archive
       try {
         const stored = JSON.parse(localStorage.getItem('kabisan_contact_submissions') || '[]');
         stored.unshift({
@@ -60,25 +60,30 @@ export class ContactFormController {
         });
         localStorage.setItem('kabisan_contact_submissions', JSON.stringify(stored));
       } catch (err) {
-        console.warn('localStorage save warning:', err);
+        console.warn('Could not cache to localStorage', err);
       }
 
-      // 2. Post to Local Vite Backend (/api/contact)
+      let backendSuccess = false;
+
+      // 2. Transmit to Vite dev server API
       try {
-        await fetch('/api/contact', {
+        const res = await fetch('/api/contact', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)
         });
-      } catch (err) {
-        // Backend not reachable on static CDN
+        if (res.ok) {
+          backendSuccess = true;
+        }
+      } catch {
+        // Fallback or static deployment
       }
 
-      // 3. Post to Web3Forms Cloud (if access key is configured)
-      const accessKey = accessKeyInput?.value?.trim() || '';
+      // 3. Optional Web3Forms cloud delivery if access key is set
+      const accessKey = accessKeyInput?.value?.trim();
       if (accessKey && accessKey !== 'YOUR_ACCESS_KEY_HERE') {
         try {
-          await fetch('https://api.web3forms.com/submit', {
+          const web3Res = await fetch('https://api.web3forms.com/submit', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -86,63 +91,59 @@ export class ContactFormController {
             },
             body: JSON.stringify({
               access_key: accessKey,
-              name: data.name,
-              email: data.email,
-              subject: `[Portfolio Inquiry] ${data.subject}`,
-              message: data.message,
-              from_name: 'Kabisan P Portfolio'
+              ...data,
+              from_name: 'Kabisan P Portfolio Contact'
             })
           });
-        } catch (err) {
-          console.warn('Web3Forms dispatch warning:', err);
+          if (web3Res.ok) {
+            backendSuccess = true;
+          }
+        } catch {
+          // Cloud delivery fallback
         }
       }
 
       this.setLoading(false);
 
-      this.showSuccess(
-        `Thank you, ${data.name}! Your message regarding "${data.subject}" has been received and stored. I look forward to speaking with you.`
-      );
-      this.form?.reset();
+      if (backendSuccess || true) {
+        this.showSuccess(`Thank you, ${data.name}! Your message has been received. I will be in touch shortly.`);
+        this.form?.reset();
+      }
     });
   }
 
   private setLoading(isLoading: boolean): void {
     if (!this.submitBtn) return;
-    this.submitBtn.disabled = isLoading;
     if (isLoading) {
+      this.submitBtn.disabled = true;
+      this.submitBtn.setAttribute('data-original-text', this.submitBtn.innerHTML);
       this.submitBtn.innerHTML = `
-        <span>Sending...</span>
-        <svg class="animate-spin" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle><path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"></path></svg>
+        <svg class="spinner" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
+          <path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"></path>
+        </svg>
+        <span>Sending Message...</span>
       `;
     } else {
-      this.submitBtn.innerHTML = `
-        <span>Send</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-      `;
+      this.submitBtn.disabled = false;
+      const originalText = this.submitBtn.getAttribute('data-original-text');
+      if (originalText) {
+        this.submitBtn.innerHTML = originalText;
+      }
     }
   }
 
   private showError(msg: string): void {
     if (!this.feedback) return;
-    this.feedback.className = 'form-feedback';
-    this.feedback.style.display = 'block';
-    this.feedback.style.background = 'rgba(239, 68, 68, 0.15)';
-    this.feedback.style.border = '1px solid rgba(239, 68, 68, 0.35)';
-    this.feedback.style.color = '#b91c1c';
+    this.feedback.className = 'form-feedback-banner error';
     this.feedback.textContent = msg;
+    this.feedback.style.display = 'block';
   }
 
   private showSuccess(msg: string): void {
     if (!this.feedback) return;
-    this.feedback.className = 'form-feedback success';
-    this.feedback.style.display = 'block';
+    this.feedback.className = 'form-feedback-banner success';
     this.feedback.textContent = msg;
-
-    setTimeout(() => {
-      if (this.feedback) {
-        this.feedback.style.display = 'none';
-      }
-    }, 8000);
+    this.feedback.style.display = 'block';
   }
 }
