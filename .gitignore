@@ -16,6 +16,7 @@ Thumbs.db
 *.log
 
 # IDE & temporary files
+*.lnk
 .vscode/
 .idea/
 *.suo
